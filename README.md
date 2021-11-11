@@ -4,14 +4,15 @@ A Jupyter server extension for auditing code run in notebooks.
 
 ## Installation
 
-Install the server extension
-`/opt/jupyterhub/bin/python3 -m pip install -e .`
+1. Clone the repository `git clone git@github.com:mkearns-ccri/jupyter-audit.git`
 
-Enable the server extension
-`/opt/jupyterhub/bin/jupyter serverextension enable --py jupyter-audit`
+2. Move into the directory `cd /your/path/to/jupyter-audit`
 
-Start JupyterHub
-`/opt/jupyterhub/bin/jupyterhub -f /opt/jupyterhub/etc/jupyterhub/jupyterhub_config.py`
+3. Install the server extension `/opt/jupyterhub/bin/python3 -m pip install -e .`
+
+4. Enable the server extension `/opt/jupyterhub/bin/jupyter serverextension enable --py jupyter-audit`
+
+5. Start JupyterHub `/opt/jupyterhub/bin/jupyterhub -f /opt/jupyterhub/etc/jupyterhub/jupyterhub_config.py`
 
 ## Configuring the Logger
 
