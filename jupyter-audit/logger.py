@@ -6,7 +6,7 @@ from logging.handlers import TimedRotatingFileHandler
 
 class RollingCellLogger:
 
-    def __init__(self, audit_dir="/opt/jupyterhub/audit", audit_file="audit.log", when="m", interval=1, level=logging.INFO):
+    def __init__(self, audit_dir="/opt/jupyterhub/audit", audit_file="audit.log", when="h", interval=1):
 
         # create audit directory if it doesn't exist yet
         if not os.path.exists(audit_dir):
@@ -16,8 +16,6 @@ class RollingCellLogger:
         handler = TimedRotatingFileHandler(path, when=when, interval=interval)
 
         self._logger = logging.getLogger("RollingCellLogger")
-
-        self._logger.setLevel(level)
         self._logger.addHandler(handler)
 
     def log(self, msg):
