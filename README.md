@@ -10,7 +10,7 @@ A Jupyter server extension for auditing code run in notebooks.
 
 3. Install the server extension `/opt/jupyterhub/bin/python3 -m pip install -e .`
 
-4. Enable the server extension `/opt/jupyterhub/bin/jupyter serverextension enable --py jupyter-audit`
+4. Enable the server extension `/opt/jupyterhub/bin/jupyter serverextension enable --py jupyter-audit --sys-prefix`
 
 5. Start JupyterHub `/opt/jupyterhub/bin/jupyterhub -f /opt/jupyterhub/etc/jupyterhub/jupyterhub_config.py`
 
